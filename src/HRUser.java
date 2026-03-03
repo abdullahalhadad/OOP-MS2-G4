@@ -1,49 +1,25 @@
-public class HREmployee extends Employee
-        implements CrudOperations, AttendanceOperations {
+public class HRUser extends User {
 
-    public HREmployee(String id, String fname, String lname, double salary) {
-        super(id, fname, lname, "HR", salary);
+    public HRUser(String username, String password) {
+        super(username, password, "HR");
     }
 
     @Override
-    public String getRole() {
-        return "HR";
+    public void accessSystem() {
+        System.out.println("Accessing HR management panel...");
     }
 
-    // CRUD
-    @Override
+    // HR-specific responsibilities
     public void createEmployee(Employee employee) {
         System.out.println("HR created employee: " + employee);
     }
 
-    @Override
-    public Employee readEmployee(String employeeId) {
-        return null; // connect to CSV or DB
-    }
-
-    @Override
     public void updateEmployee(Employee employee) {
-        System.out.println("HR updated employee.");
+        System.out.println("HR updated employee: " + employee);
     }
 
-    @Override
     public void deleteEmployee(String employeeId) {
-        System.out.println("HR deleted employee.");
-    }
-
-    // Attendance
-    @Override
-    public void timeIn() {
-        System.out.println("HR time-in recorded.");
-    }
-
-    @Override
-    public void timeOut() {
-        System.out.println("HR time-out recorded.");
-    }
-
-    @Override
-    public int computeTotalHours() {
-        return 8;
+        System.out.println("HR deleted employee with ID: " + employeeId);
     }
 }
+
