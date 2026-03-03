@@ -1,4 +1,4 @@
-public classs Main {
+public class Main {
 
   public static void main(String[] args) {
 
@@ -9,17 +9,17 @@ public classs Main {
             "Dela Cruz",
             "Staff",
             30000
-      );
+    );
 
       // Create Contractual Employee
-        Employee contractual = new ContractualEmployee(
-                "E002",
-                "Maria",
-                "Santos",
-                "Contractual",
-                500,      // hourly rate
-                160       // hours worked
-        );
+    Employee contractual = new ContractualEmployee(
+            "E002",
+            "Maria",
+            "Santos",
+            "Contractual",
+            500,
+            160
+    );
 
         // Create Payroll Processor
         PayrollProcessor processor = new PayrollProcessor();

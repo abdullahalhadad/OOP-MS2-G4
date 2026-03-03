@@ -1,8 +1,9 @@
 public class ContractualEmployee extends Employee {
 
-    puiblic ContractualEmployee(String employeeId, String firstName,
-                                String lastName, String position, 
-                                double hourlyRate, doublehoursWorked) {
+    public ContractualEmployee(String employeeId, String firstName,
+                               String lastName, String position,
+                               double hourlyRate, double hoursWorked) {
+
         super(employeeId, firstName, lastName, position, 0);
         this.hourlyRate = hourlyRate;
         this.hoursWorked = hoursWorked;

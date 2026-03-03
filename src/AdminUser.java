@@ -5,7 +5,7 @@ public class AdminUser extends User {
 
         @Override
         public void accessSystem() {
-                System.out.printLn("Accessing system administration panel...");
+                System.out.println("Accessing system administration panel...");
         }
 
         // Admin-spceific operations

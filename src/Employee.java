@@ -44,7 +44,7 @@ public abstract class Employee {
         return calculateGrossPay()
                 - computeSSS()
                 - computePhilHealth()
-                - computePagIbig()
+                - computePagIBIG()
                 - computeTax();
     }
 

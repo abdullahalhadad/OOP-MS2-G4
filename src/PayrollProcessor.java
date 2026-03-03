@@ -1,4 +1,4 @@
-pubclic class PayrollProcessor {
+public class PayrollProcessor {
 
   // Basic salary processing
     public double calculateSalary(Employee employee) {
