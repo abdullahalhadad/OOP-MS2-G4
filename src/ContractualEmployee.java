@@ -1,26 +1,15 @@
-public class FinanceEmployee extends Employee implements Calculation {
+public class ContractualEmployee extends Employee {
 
-    public FinanceEmployee(String id, String fname, String lname, double salary) {
-        super(id, fname, lname, "Finance", salary);
+    puiblic ContractualEmployee(String employeeId, String firstName,
+                                String lastName, String position, 
+                                double hourlyRate, doublehoursWorked) {
+        super(employeeId, firstName, lastName, position, 0);
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
     }
 
     @Override
-    public String getRole() {
-        return "Finance";
-    }
-
-    @Override
-    public double calculateSalary() {
-        return basicSalary;
-    }
-
-    @Override
-    public double calculateDeductions() {
-        return basicSalary * 0.10;
-    }
-
-    @Override
-    public double calculateNetPay() {
-        return calculateSalary() - calculateDeductions();
+    public double calculateGrossPay() {
+        return hourlyRate * hoursWorked;
     }
 }
