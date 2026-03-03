@@ -10,7 +10,7 @@ public class AdminUser extends User {
 
         // Admin-spceific operations
         public void createUser(User user) {
-                System.out.println("User created successfully.");
+                System.out.println("Admin created user: " + user.getUsername());
         }
 
         public void assignRole(User user, String role) {
@@ -18,3 +18,4 @@ public class AdminUser extends User {
                 System.out.println("Role assigned: " + role);
         }
 }
+
