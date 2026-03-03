@@ -1,28 +1,20 @@
-public class AdminEmployee extends Employee
-        implements CrudOperations, Calculation, AttendanceOperations {
+public class AdminUser extends User {
+        public AdminUser(String username, String password) {
+                super(username, password, "Admin");
+        }
 
-    public AdminEmployee(String id, String fname, String lname, double salary) {
-        super(id, fname, lname, "Admin", salary);
-    }
+        @Override
+        public void accessSystem() {
+                System.out.printLn("Accessing system administration panel...");
+        }
 
-    @Override
-    public String getRole() {
-        return "Admin";
-    }
+        // Admin-spceific operations
+        public void createUser(User user) {
+                System.out.println("User created successfully.");
+        }
 
-    // CRUD
-    public void createEmployee(Employee e) {}
-    public Employee readEmployee(String id) { return null; }
-    public void updateEmployee(Employee e) {}
-    public void deleteEmployee(String id) {}
-
-    // Calculation
-    public double calculateSalary() { return basicSalary; }
-    public double calculateDeductions() { return basicSalary * 0.12; }
-    public double calculateNetPay() { return calculateSalary() - calculateDeductions(); }
-
-    // Attendance
-    public void timeIn() {}
-    public void timeOut() {}
-    public int computeTotalHours() { return 8; }
+        public void assignRole(User user, String role) {
+                user.setRole(role);
+                System.out.println("Role assigned: " + role);
+        }
 }
