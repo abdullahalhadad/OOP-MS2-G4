@@ -1,25 +1,25 @@
 public class Main {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    // Create regular employee
-    Employee regular = new RegularEmployee(
-            "E001",
-            "Juan",
-            "Dela Cruz",
-            "Staff",
-            30000
-    );
+        // Create regular employee
+        Employee regular = new RegularEmployee(
+                "E001",
+                "Juan",
+                "Dela Cruz",
+                "Staff",
+                30000
+        );
 
-      // Create Contractual Employee
-    Employee contractual = new ContractualEmployee(
-            "E002",
-            "Maria",
-            "Santos",
-            "Contractual",
-            500,
-            160
-    );
+        // Create contractual employee
+        Employee contractual = new ContractualEmployee(
+                "E002",
+                "Maria",
+                "Santos",
+                "Contractual",
+                500,
+                160
+        );
 
         // Create Payroll Processor
         PayrollProcessor processor = new PayrollProcessor();
@@ -37,7 +37,7 @@ public class Main {
         System.out.println();
 
         // Test method overloading
-        double bonusSalary = processor.calculateSalary(regular, 5000);
+        double bonusSalary = processor.calculateNetPay(regular) + 5000;
         System.out.println("Regular with Bonus: " + bonusSalary);
     }
 }

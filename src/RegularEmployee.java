@@ -2,7 +2,10 @@ public class RegularEmployee extends Employee {
 
   public RegularEmployee(String employeeId, String firstName, String lastName,
                          String position, double basicSalary) {
-    super(employeeId,firstName, lastName, position, basicSalary);
+
+    super(employeeId, firstName, lastName, position);
+
+    this.basicSalary = basicSalary;
   }
 
   @Override
